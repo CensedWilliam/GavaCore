@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: ModpackInstaller
+Implementation-Title: GavaCore Installer
+Implementation-Version: 1.0
+

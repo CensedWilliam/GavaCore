@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'org.gavatech'
+version '1.0'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+application {
+    mainClass = 'ModpackInstaller'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.formdev:flatlaf:3.2.1'
+    implementation 'org.json:json:20231013'
+}
+
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'ModpackInstaller',
+            'Implementation-Title': 'GavaCore Installer',
+            'Implementation-Version': version
+        )
+    }
+    
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    
+    from('src/main/resources') {
+        include '**/*'
+    }
+    
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+run {
+    standardInput = System.in
+    standardOutput = System.out
+    errorOutput = System.err
+} 

@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: ModpackInstaller
+Permissions: sandbox
+Application-Name: Minecraft Modpack Installer
+Trusted-Library: true 

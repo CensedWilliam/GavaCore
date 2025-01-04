@@ -1,0 +1,5 @@
+{
+    "version": "1.0.1",
+    "download_url": "https://www.dropbox.com/scl/fi/xrwr1syyhuaf8096w27p1/GavaCore.zip?rlkey=s8o3hc1azudzqolrugxxgdk7o&st=h9mxtwhp&dl=1",
+    "changelog": "- Aggiunto sistema di aggiornamento automatico\n- Migliorata l'interfaccia utente\n- Aggiunto supporto per le emoji\n- Corretti bug minori\n- Aggiunta dimensione minima finestra"
+} 
