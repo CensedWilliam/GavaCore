@@ -1,5 +1,5 @@
 {
-    "version": "1.0.3",
-    "download_url": "https://www.dropbox.com/scl/fi/l4iwdywceifo04putgqdy/installmodpackapp-1.0.jar?rlkey=61wf37vek4gdizmhzf5wn304d&st=yx4mut2r&dl=1",
-    "changelog": "- Aggiunto sistema di aggiornamento automatico\n- Migliorata l'interfaccia utente\n- Aggiunto supporto per le emoji\n- Corretti bug minori\n- Aggiunta dimensione minima"
+    "version": "1.0.4",
+    "download_url": "https://www.dropbox.com/scl/fi/2au2g2gap9g5r1udoa1dy/installmodpackapp-1.0.jar?rlkey=oqz61p1d80ce7j2shik1hv5qn&st=fckzc732&dl=1",
+    "changelog": "- Aggiunto sistema di aggiornamento automatico\n- Migliorata l'interfaccia utente\n- Aggiunto supporto per le emoji\n- Corretti bug minori\n- Test"
 } 
