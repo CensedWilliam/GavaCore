@@ -1,0 +1,206 @@
+name: GavaCore
+version: 1.0
+main: library.Main
+api-version: '1.20'
+author: GavaTech
+description: Plugin core con funzionalità base
+
+commands:
+  firstjoinanimation:
+    description: Gestisci l'animazione di primo join
+    usage: /firstjoinanimation
+    permission: gavacore.admin
+    aliases: [fja]
+  furry:
+    description: Crea un pistone appiccicoso dietro al player
+    usage: /furry
+  gmc:
+    description: Imposta la modalità creativa
+    usage: /gmc [player]
+    permission: gavacore.gamemode
+  gms:
+    description: Imposta la modalità sopravvivenza
+    usage: /gms [player]
+    permission: gavacore.gamemode
+  gmsp:
+    description: Imposta la modalità spettatore
+    usage: /gmsp [player]
+    permission: gavacore.gamemode
+  gma:
+    description: Imposta la modalità avventura
+    usage: /gma [player]
+    permission: gavacore.gamemode
+  gavacore:
+    description: Menu principale del plugin
+    usage: /gavacore
+  ciao:
+    description: Messaggio di benvenuto
+    usage: /ciao
+  sito:
+    description: Mostra il sito web
+    usage: /sito
+  soprannome:
+    description: Imposta un soprannome
+    usage: /soprannome <nickname>
+  ripristina:
+    description: Ripristina il nome originale
+    usage: /ripristina
+  # Vecchi comandi meteo rimossi e sostituiti con i nuovi comandi in italiano (/sereno, /temporale, etc.)
+  blocca:
+    description: Blocca una chest
+    usage: /blocca
+  sblocca:
+    description: Sblocca una chest
+    usage: /sblocca
+  monete-fisiche:
+    description: Converti monete in item
+    usage: /monete-fisiche <importo>
+  soldi:
+    description: Visualizza il saldo
+    usage: /soldi
+  rimuovi-condivisione:
+    description: Rimuovi la condivisione di una chest
+    usage: /rimuovi-condivisione <player>
+  condividi:
+    description: Condividi una chest
+    usage: /condividi <player>
+  lista-condivisioni:
+    description: Lista delle condivisioni
+    usage: /lista-condivisioni
+  sedia:
+    description: Siediti
+    usage: /sedia
+    aliases: [sit]
+  libera:
+    description: Libera un giocatore trasformato
+    usage: /libera <player>
+  msg:
+    description: Invia un messaggio privato
+    usage: /msg <player> <messaggio>
+  r:
+    description: Rispondi all'ultimo messaggio
+    usage: /r <messaggio>
+  chat:
+    description: Gestisci la chat
+    usage: /chat <on/off>
+    permission: gavacore.chat
+  puliscichat:
+    description: Pulisci la chat
+    usage: /puliscichat
+    permission: gavacore.chat
+  tp:
+    description: Richiedi teletrasporto
+    usage: /tp <player>
+  tpqui:
+    description: Richiedi teletrasporto qui
+    usage: /tpqui <player>
+  tpaccept:
+    description: Accetta teletrasporto
+    usage: /tpaccept <player>
+  tpdeny:
+    description: Rifiuta teletrasporto
+    usage: /tpdeny <player>
+  backpacks:
+    description: Menu zaini
+    usage: /backpacks
+    aliases: [zaini, bp]
+  craft:
+    description: Apri crafting table
+    usage: /craft
+  developer-mode:
+    description: Attiva/disattiva modalità sviluppatore
+    usage: /developer-mode
+    permission: gavacore.developer
+  dev:
+    description: Comandi sviluppatore
+    usage: /dev
+    permission: gavacore.developer
+  animation:
+    description: Gestisce l'animazione di primo accesso
+    usage: /animation <play|reset|stop|list> [player]
+    permission: gavacore.animation
+  resolveanimationbugs:
+    description: Risolve i bug delle animazioni che bloccano i giocatori
+    usage: /resolveanimationbugs [giocatore]
+    aliases: [fixme, unfreeze, fixanim]
+    permission: gavacore.resolvebugs
+  giorno:
+    description: Imposta il giorno nel mondo
+    usage: /giorno [mondo]
+    permission: gavacore.time.day
+  notte:
+    description: Imposta la notte nel mondo
+    usage: /notte [mondo]
+    permission: gavacore.time.night
+  alba:
+    description: Imposta l'alba nel mondo
+    usage: /alba [mondo]
+    permission: gavacore.time.dawn
+  tramonto:
+    description: Imposta il tramonto nel mondo
+    usage: /tramonto [mondo]
+    permission: gavacore.time.sunset
+  tempo:
+    description: Imposta un tempo specifico nel mondo
+    usage: /tempo <valore> [mondo]
+    permission: gavacore.time.set
+  sereno:
+    description: Imposta il tempo sereno nel mondo
+    usage: /sereno [mondo]
+    permission: gavacore.weather.clear
+  pioggia:
+    description: Fa iniziare la pioggia nel mondo
+    usage: /pioggia [mondo]
+    permission: gavacore.weather.rain
+  temporale:
+    description: Scatena un temporale nel mondo
+    usage: /temporale [mondo]
+    permission: gavacore.weather.thunder
+  meteo:
+    description: Mostra informazioni su tempo e meteo
+    usage: /meteo [mondo]
+    permission: gavacore.weather.info
+
+permissions:
+  gavacore.gamemode:
+    description: Permette di cambiare modalità di gioco
+    default: op
+  gavacore.chat:
+    description: Permette di gestire la chat
+    default: op
+  gavacore.developer:
+    description: Permette di usare i comandi sviluppatore
+    default: op
+  gavacore.resolvebugs:
+    description: Permette di risolvere i bug delle animazioni
+    default: true
+  gavacore.resolvebugs.others:
+    description: Permette di risolvere i bug delle animazioni per altri giocatori
+    default: op
+  gavacore.time.day:
+    description: Permette di impostare il giorno
+    default: op
+  gavacore.time.night:
+    description: Permette di impostare la notte
+    default: op
+  gavacore.time.dawn:
+    description: Permette di impostare l'alba
+    default: op
+  gavacore.time.sunset:
+    description: Permette di impostare il tramonto
+    default: op
+  gavacore.time.set:
+    description: Permette di impostare un tempo specifico
+    default: op
+  gavacore.weather.clear:
+    description: Permette di impostare il tempo sereno
+    default: op
+  gavacore.weather.rain:
+    description: Permette di far iniziare la pioggia
+    default: op
+  gavacore.weather.thunder:
+    description: Permette di scatenare temporali
+    default: op
+  gavacore.weather.info:
+    description: Permette di visualizzare informazioni meteo
+    default: true 
