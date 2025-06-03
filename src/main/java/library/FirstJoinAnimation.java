@@ -168,8 +168,8 @@ public class FirstJoinAnimation implements Listener {
         
         // Rimuovi gli effetti pozione che potrebbero essere rimasti
         player.removePotionEffect(PotionEffectType.BLINDNESS);
-        player.removePotionEffect(PotionEffectType.SLOW);
-        player.removePotionEffect(PotionEffectType.JUMP);
+        player.removePotionEffect(VersionCompatibility.getSlownessEffect());
+        player.removePotionEffect(VersionCompatibility.getJumpBoostEffect());
         
         // Rimuovi l'animazione interrotta
         animationData.set(path, null);
@@ -230,8 +230,8 @@ public class FirstJoinAnimation implements Listener {
             
             // Rimuovi effetti che potrebbero essere rimasti
             player.removePotionEffect(PotionEffectType.BLINDNESS);
-            player.removePotionEffect(PotionEffectType.SLOW);
-            player.removePotionEffect(PotionEffectType.JUMP);
+            player.removePotionEffect(VersionCompatibility.getSlownessEffect());
+            player.removePotionEffect(VersionCompatibility.getJumpBoostEffect());
             
             // Informa il giocatore
             player.sendMessage("§6§l[GavaCore] §eL'animazione precedente è stata interrotta per un problema del server.");
@@ -380,7 +380,7 @@ public class FirstJoinAnimation implements Listener {
         }
         
         // Impedisci al giocatore di accovacciarsi durante l'animazione
-        player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, MAX_ANIMATION_DURATION, 128, false, false, false));
+        player.addPotionEffect(new PotionEffect(VersionCompatibility.getJumpBoostEffect(), MAX_ANIMATION_DURATION, 128, false, false, false));
         player.setSneaking(false);
         
         // Crea un ArmorStand invisibile per la visuale della camera
@@ -554,8 +554,8 @@ public class FirstJoinAnimation implements Listener {
                 
                 // Rimuovi effetti che potrebbero interferire con il movimento
                 player.removePotionEffect(PotionEffectType.BLINDNESS);
-                player.removePotionEffect(PotionEffectType.SLOW);
-                player.removePotionEffect(PotionEffectType.JUMP);
+                player.removePotionEffect(VersionCompatibility.getSlownessEffect());
+                player.removePotionEffect(VersionCompatibility.getJumpBoostEffect());
                 
                 // Assicurati che possa volare se era in creative o spettatore
                 if (previousGameMode == GameMode.CREATIVE || previousGameMode == GameMode.SPECTATOR) {
@@ -569,7 +569,7 @@ public class FirstJoinAnimation implements Listener {
                 
                 // Effetto finale
                 player.getWorld().spawnParticle(
-                    Particle.EXPLOSION_HUGE,
+                    VersionCompatibility.getExplosionEmitterParticle(),
                     player.getLocation().add(0, 1, 0),
                     1, 0, 0, 0, 0,
                     null,

@@ -113,7 +113,7 @@ public class GUIManager implements Listener {
         ItemStack treeCutter = new ItemStack(Material.DIAMOND_AXE);
         ItemMeta treeCutterMeta = treeCutter.getItemMeta();
         treeCutterMeta.setDisplayName("§a§lTaglialegna");
-        treeCutterMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+        treeCutterMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
         treeCutterMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS, ItemFlag.HIDE_ATTRIBUTES);
         List<String> treeCutterLore = Arrays.asList(
             "§7Taglia interi alberi con un",
@@ -134,7 +134,7 @@ public class GUIManager implements Listener {
         ItemStack weather = new ItemStack(Material.WATER_BUCKET);
         ItemMeta weatherMeta = weather.getItemMeta();
         weatherMeta.setDisplayName("§b§lMeteo");
-        weatherMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+        weatherMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
         weatherMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         List<String> weatherLore = Arrays.asList(
             "§7Controlla il meteo del server",
@@ -153,7 +153,7 @@ public class GUIManager implements Listener {
         ItemStack gamemode = new ItemStack(Material.DIAMOND_SWORD);
         ItemMeta gamemodeMeta = gamemode.getItemMeta();
         gamemodeMeta.setDisplayName("§c§lGamemode");
-        gamemodeMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+        gamemodeMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
         gamemodeMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS, ItemFlag.HIDE_ATTRIBUTES);
         List<String> gamemodeLore = Arrays.asList(
             "§7Cambia la tua modalità di gioco",
@@ -174,7 +174,7 @@ public class GUIManager implements Listener {
         ItemStack chat = new ItemStack(Material.WRITABLE_BOOK);
         ItemMeta chatMeta = chat.getItemMeta();
         chatMeta.setDisplayName("§a§lChat");
-        chatMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+        chatMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
         chatMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         List<String> chatLore = Arrays.asList(
             "§7Gestisci la chat del server",
@@ -192,7 +192,7 @@ public class GUIManager implements Listener {
         ItemStack teleport = new ItemStack(Material.ENDER_PEARL);
         ItemMeta teleportMeta = teleport.getItemMeta();
         teleportMeta.setDisplayName("§5§lTeleport");
-        teleportMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+        teleportMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
         teleportMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         List<String> teleportLore = Arrays.asList(
             "§7Gestisci i teletrasporti",
@@ -210,7 +210,7 @@ public class GUIManager implements Listener {
         ItemStack transform = new ItemStack(Material.BONE);
         ItemMeta transformMeta = transform.getItemMeta();
         transformMeta.setDisplayName("§d§lTrasformazioni");
-        transformMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+        transformMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
         transformMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         List<String> transformLore = Arrays.asList(
             "§7Trasformati in un cane o",
@@ -227,7 +227,7 @@ public class GUIManager implements Listener {
         ItemStack items = new ItemStack(Material.CHEST);
         ItemMeta itemsMeta = items.getItemMeta();
         itemsMeta.setDisplayName("§6§lItems Custom");
-        itemsMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+        itemsMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
         itemsMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         List<String> itemsLore = Arrays.asList(
             "§7Visualizza e crafta gli",
@@ -250,7 +250,7 @@ public class GUIManager implements Listener {
             ItemMeta backpackMeta = backpack.getItemMeta();
             backpackMeta.setDisplayName("§6§lZaini");
             backpackMeta.setCustomModelData(800001);
-            backpackMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+            backpackMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
             backpackMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             List<String> backpackLore = Arrays.asList(
                 "§7Visualizza e crafta gli",
@@ -283,7 +283,7 @@ public class GUIManager implements Listener {
             if (plugin.isDeveloperMode()) {
                 devLore.add("§c§lModalità Sviluppatore: §aAttiva");
                 devLore.add("§7• Click per vedere i comandi");
-                devToolsMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+                devToolsMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
                 devToolsMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             } else {
                 devLore.add("§c§lModalità Sviluppatore: §cDisattivata");
@@ -298,7 +298,7 @@ public class GUIManager implements Listener {
         ItemStack pluginManager = new ItemStack(Material.NETHER_STAR);
         ItemMeta pluginMeta = pluginManager.getItemMeta();
         pluginMeta.setDisplayName("§d§lGestione Plugin");
-        pluginMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+        pluginMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
         pluginMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         List<String> pluginLore = new ArrayList<>();
         pluginLore.add("§7Gestisci e visualizza tutti");
@@ -553,7 +553,7 @@ public class GUIManager implements Listener {
                 "",
                 "§e➜ Click per info"
             ));
-            tpCoordsMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+            tpCoordsMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
             tpCoordsMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             tpCoords.setItemMeta(tpCoordsMeta);
             gui.setItem(29, tpCoords);
@@ -571,7 +571,7 @@ public class GUIManager implements Listener {
                 "",
                 "§e➜ Click per info"
             ));
-            tpPlayerToPlayerMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+            tpPlayerToPlayerMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
             tpPlayerToPlayerMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             tpPlayerToPlayer.setItemMeta(tpPlayerToPlayerMeta);
             gui.setItem(31, tpPlayerToPlayer);
@@ -589,7 +589,7 @@ public class GUIManager implements Listener {
                 "",
                 "§e➜ Click per info"
             ));
-            tpPlayerToCoordsMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+            tpPlayerToCoordsMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
             tpPlayerToCoordsMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             tpPlayerToCoords.setItemMeta(tpPlayerToCoordsMeta);
             gui.setItem(33, tpPlayerToCoords);
@@ -698,7 +698,7 @@ public class GUIManager implements Listener {
         ItemStack guinzaglio = new ItemStack(Material.LEAD);
         ItemMeta guinzaglioMeta = guinzaglio.getItemMeta();
         guinzaglioMeta.setDisplayName("§d§lGuinzaglio Magico");
-        guinzaglioMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+        guinzaglioMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
         guinzaglioMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         guinzaglioMeta.setLore(Arrays.asList(
             "§7Trasforma i giocatori in cani",
@@ -826,7 +826,7 @@ public class GUIManager implements Listener {
             ItemStack train = new ItemStack(Material.POWERED_RAIL);
             ItemMeta trainMeta = train.getItemMeta();
             trainMeta.setDisplayName("§6§lSistema Treni");
-            trainMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+            trainMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
             trainMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             List<String> trainLore = new ArrayList<>();
             trainLore.add("§7Plugin: §fGavaCore-TrainAddons");
@@ -847,7 +847,7 @@ public class GUIManager implements Listener {
             ItemStack post = new ItemStack(Material.WRITABLE_BOOK);
             ItemMeta postMeta = post.getItemMeta();
             postMeta.setDisplayName("§e§lSistema Postale");
-            postMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+            postMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
             postMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             List<String> postLore = new ArrayList<>();
             postLore.add("§7Plugin: §fGavaCore-PosteAddons");
@@ -869,7 +869,7 @@ public class GUIManager implements Listener {
             ItemMeta backpackMeta = backpack.getItemMeta();
             backpackMeta.setDisplayName("§6§lBackpackPlus");
             backpackMeta.setCustomModelData(800001);
-            backpackMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+            backpackMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
             backpackMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             List<String> backpackLore = new ArrayList<>();
             backpackLore.add("§7Plugin: §fBackpackPlus");
@@ -890,7 +890,7 @@ public class GUIManager implements Listener {
             ItemStack coins = new ItemStack(Material.GOLD_INGOT);
             ItemMeta coinsMeta = coins.getItemMeta();
             coinsMeta.setDisplayName("§e§lCoins");
-            coinsMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+            coinsMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
             coinsMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             List<String> coinsLore = new ArrayList<>();
             coinsLore.add("§7Plugin: §fGavaCore-Coins");
@@ -911,7 +911,7 @@ public class GUIManager implements Listener {
             ItemStack iconomy = new ItemStack(Material.EMERALD);
             ItemMeta iconomyMeta = iconomy.getItemMeta();
             iconomyMeta.setDisplayName("§a§liConomy");
-            iconomyMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+            iconomyMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
             iconomyMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             List<String> iconomyLore = new ArrayList<>();
             iconomyLore.add("§7Plugin: §fiConomyUnlocked");
@@ -932,7 +932,7 @@ public class GUIManager implements Listener {
             ItemStack skin = new ItemStack(Material.PLAYER_HEAD);
             ItemMeta skinMeta = skin.getItemMeta();
             skinMeta.setDisplayName("§e§lSkinRestorer");
-            skinMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+            skinMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
             skinMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             List<String> skinLore = new ArrayList<>();
             skinLore.add("§7Plugin: §fSkinsRestorer");
@@ -953,7 +953,7 @@ public class GUIManager implements Listener {
             ItemStack timber = new ItemStack(Material.DIAMOND_AXE);
             ItemMeta timberMeta = timber.getItemMeta();
             timberMeta.setDisplayName("§a§lSmooth Timber");
-            timberMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+            timberMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
             timberMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS, ItemFlag.HIDE_ATTRIBUTES);
             List<String> timberLore = new ArrayList<>();
             timberLore.add("§7Plugin: §fSmoothTimber");
@@ -1831,7 +1831,7 @@ public class GUIManager implements Listener {
         ItemStack axe = new ItemStack(Material.DIAMOND_AXE);
         ItemMeta axeMeta = axe.getItemMeta();
         axeMeta.setDisplayName("§a§lTreeCutter");
-        axeMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+        axeMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
         axeMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS, ItemFlag.HIDE_ATTRIBUTES);
         List<String> axeLore = Arrays.asList(
             "§7Il sistema TreeCutter ti permette",
@@ -1922,7 +1922,7 @@ public class GUIManager implements Listener {
             ItemStack train = new ItemStack(Material.POWERED_RAIL);
             ItemMeta trainMeta = train.getItemMeta();
             trainMeta.setDisplayName("§6§lSistema Treni");
-            trainMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+            trainMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
             trainMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             List<String> trainLore = new ArrayList<>();
             trainLore.add("§7Plugin: §fGavaCore-TrainAddons");
@@ -1943,7 +1943,7 @@ public class GUIManager implements Listener {
             ItemStack post = new ItemStack(Material.WRITABLE_BOOK);
             ItemMeta postMeta = post.getItemMeta();
             postMeta.setDisplayName("§e§lSistema Postale");
-            postMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+            postMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
             postMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             List<String> postLore = new ArrayList<>();
             postLore.add("§7Plugin: §fGavaCore-PosteAddons");
@@ -1965,7 +1965,7 @@ public class GUIManager implements Listener {
             ItemMeta backpackMeta = backpack.getItemMeta();
             backpackMeta.setDisplayName("§6§lBackpackPlus");
             backpackMeta.setCustomModelData(800001);
-            backpackMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+            backpackMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
             backpackMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             List<String> backpackLore = new ArrayList<>();
             backpackLore.add("§7Plugin: §fBackpackPlus");
@@ -1986,7 +1986,7 @@ public class GUIManager implements Listener {
             ItemStack coins = new ItemStack(Material.GOLD_INGOT);
             ItemMeta coinsMeta = coins.getItemMeta();
             coinsMeta.setDisplayName("§e§lCoins");
-            coinsMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+            coinsMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
             coinsMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             List<String> coinsLore = new ArrayList<>();
             coinsLore.add("§7Plugin: §fGavaCore-Coins");
@@ -2007,7 +2007,7 @@ public class GUIManager implements Listener {
             ItemStack iconomy = new ItemStack(Material.EMERALD);
             ItemMeta iconomyMeta = iconomy.getItemMeta();
             iconomyMeta.setDisplayName("§a§liConomy");
-            iconomyMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+            iconomyMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
             iconomyMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             List<String> iconomyLore = new ArrayList<>();
             iconomyLore.add("§7Plugin: §fiConomyUnlocked");
@@ -2028,7 +2028,7 @@ public class GUIManager implements Listener {
             ItemStack skin = new ItemStack(Material.PLAYER_HEAD);
             ItemMeta skinMeta = skin.getItemMeta();
             skinMeta.setDisplayName("§e§lSkinRestorer");
-            skinMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+            skinMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
             skinMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             List<String> skinLore = new ArrayList<>();
             skinLore.add("§7Plugin: §fSkinsRestorer");
@@ -2049,7 +2049,7 @@ public class GUIManager implements Listener {
             ItemStack timber = new ItemStack(Material.DIAMOND_AXE);
             ItemMeta timberMeta = timber.getItemMeta();
             timberMeta.setDisplayName("§a§lSmooth Timber");
-            timberMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+            timberMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
             timberMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS, ItemFlag.HIDE_ATTRIBUTES);
             List<String> timberLore = new ArrayList<>();
             timberLore.add("§7Plugin: §fSmoothTimber");
@@ -2278,7 +2278,7 @@ public class GUIManager implements Listener {
             "",
             "§e➜ Click per inserire l'importo"
         ));
-        moneteMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+        moneteMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
         moneteMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         monete.setItemMeta(moneteMeta);
         gui.setItem(13, monete);

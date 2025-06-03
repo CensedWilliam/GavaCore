@@ -217,7 +217,7 @@ public class TeleportAnimation implements Listener {
         }
         
         // Impedisci al giocatore di accovacciarsi durante l'animazione
-        player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, ANIMATION_DURATION, 128, false, false, false));
+        player.addPotionEffect(new PotionEffect(VersionCompatibility.getJumpBoostEffect(), ANIMATION_DURATION, 128, false, false, false));
         player.setSneaking(false);
         
         // Crea un ArmorStand invisibile per la visuale della camera

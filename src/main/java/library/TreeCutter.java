@@ -982,7 +982,7 @@ public class TreeCutter {
                 if (nearbyPlayer.getLocation().distance(player.getLocation()) < 50) {
                     // Effetto scossa solo per chi è vicino all'albero
                     nearbyPlayer.spawnParticle(
-                        Particle.EXPLOSION_NORMAL, 
+                        VersionCompatibility.getExplosionParticle(), 
                         logs.get(0).getLocation().add(0.5, 0.5, 0.5),
                         5, 0.2, 0.2, 0.2, 0.1);
                 }
@@ -1065,7 +1065,7 @@ public class TreeCutter {
                             
                             // Aumenta l'effetto visivo dell'esplosione
                             player.getWorld().spawnParticle(
-                                Particle.EXPLOSION_LARGE, 
+                                VersionCompatibility.getExplosionEmitterParticle(), 
                                 logs.get(logs.size()-1).getLocation().add(0.5, 1.0, 0.5),
                                 5, 1.0, 1.0, 1.0, 0.1);
                             
@@ -1073,7 +1073,7 @@ public class TreeCutter {
                             for (int i = 0; i < 3; i++) {
                                 Block log = logs.get(Math.max(0, logs.size() - i - 1));
                                 player.getWorld().spawnParticle(
-                                    Particle.BLOCK_CRACK,
+                                    VersionCompatibility.getBlockParticle(),
                                     log.getLocation().add(0.5, 0.5, 0.5),
                                     30, 2.0, 2.0, 2.0, 0.1,
                                     log.getBlockData());
@@ -1099,14 +1099,14 @@ public class TreeCutter {
                     // Effetti visivi avanzati
                     // 1. Particelle di crack del blocco (standard)
                     player.getWorld().spawnParticle(
-                            Particle.BLOCK_CRACK, 
+                            VersionCompatibility.getBlockParticle(), 
                             block.getLocation().add(0.5, 0.5, 0.5), 
                             15, 0.5, 0.5, 0.5, 0, 
                             block.getBlockData());
                     
                     // 2. Particelle colorate in base al tipo di legno
                     player.getWorld().spawnParticle(
-                            Particle.REDSTONE, 
+                            VersionCompatibility.getDustParticle(), 
                             block.getLocation().add(0.5, 0.5, 0.5),
                             8, 0.5, 0.5, 0.5, 0,
                             new DustOptions(logColor, 1.5f));
@@ -1118,7 +1118,7 @@ public class TreeCutter {
                             random.nextDouble() - 0.5).normalize().multiply(0.15);
                     
                     player.getWorld().spawnParticle(
-                            Particle.SMOKE_NORMAL, 
+                            VersionCompatibility.getSmokeParticle(), 
                             block.getLocation().add(0.5, 0.5, 0.5),
                             5, 0.3, 0.3, 0.3, 0.05);
                     
@@ -1192,7 +1192,7 @@ public class TreeCutter {
                             
                             // Esplosione di particelle più intensa
                             player.getWorld().spawnParticle(
-                                    Particle.EXPLOSION_LARGE, 
+                                    VersionCompatibility.getExplosionEmitterParticle(), 
                                     player.getLocation().add(0, 1, 0),
                                     8, 1.5, 1.5, 1.5, 0.2);
                             
@@ -1214,7 +1214,7 @@ public class TreeCutter {
                             player.getWorld().playSound(player.getLocation(), 
                                 Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.8f, 0.6f);
                             player.getWorld().spawnParticle(
-                                    Particle.EXPLOSION_NORMAL, 
+                                    VersionCompatibility.getExplosionParticle(), 
                                     player.getLocation().add(0, 1, 0),
                                     3, 0.5, 0.5, 0.5, 0.1);
                         }
@@ -1233,14 +1233,14 @@ public class TreeCutter {
                             // Effetti visivi migliorati per le foglie
                             // 1. Particelle di crack del blocco
                             player.getWorld().spawnParticle(
-                                    Particle.BLOCK_CRACK, 
+                                    VersionCompatibility.getBlockParticle(), 
                                     block.getLocation().add(0.5, 0.5, 0.5), 
                                     8, 0.5, 0.5, 0.5, 0, 
                                     block.getBlockData());
                             
                             // 2. Particelle colorate in base al tipo di foglia
                             player.getWorld().spawnParticle(
-                                    Particle.REDSTONE, 
+                                    VersionCompatibility.getDustParticle(), 
                                     block.getLocation().add(0.5, 0.5, 0.5),
                                     5, 0.5, 0.5, 0.5, 0,
                                     new DustOptions(leafColor, 1.0f));
@@ -1390,7 +1390,7 @@ public class TreeCutter {
             
             // Crea particelle che simulano lo spostamento
             player.getWorld().spawnParticle(
-                Particle.BLOCK_CRACK,
+                VersionCompatibility.getBlockParticle(),
                 log.getLocation().add(0.5 + displacement.getX(), 0.5, 0.5 + displacement.getZ()),
                 3, 0.2, 0.2, 0.2, 0,
                 log.getBlockData()
@@ -1503,7 +1503,7 @@ public class TreeCutter {
             
             // Crea particelle di crack per simulare il movimento
             player.getWorld().spawnParticle(
-                Particle.BLOCK_CRACK,
+                VersionCompatibility.getBlockParticle(),
                 log.getLocation().add(0.5 + displacement.getX(), 0.5 - displacement.getY(), 0.5 + displacement.getZ()),
                 5, 0.2, 0.2, 0.2, 0,
                 log.getBlockData()
@@ -1527,7 +1527,7 @@ public class TreeCutter {
                     
                     // Crea particelle di polvere al punto di impatto previsto
                     player.getWorld().spawnParticle(
-                        Particle.BLOCK_CRACK,
+                        VersionCompatibility.getBlockParticle(),
                         landingBlock.getLocation().add(0.5, 1.0, 0.5),
                         10, 1.0, 0.2, 1.0, 0,
                         landingBlock.getBlockData()
@@ -1562,7 +1562,7 @@ public class TreeCutter {
                 
                 // Aggiungi effetti di rottura più impressionanti
                 player.getWorld().spawnParticle(
-                        Particle.ITEM_CRACK, 
+                        VersionCompatibility.getItemParticle(), 
                         player.getLocation().add(0, 1, 0),
                         20, 0.3, 0.3, 0.3, 0.1,
                         axe);
@@ -1636,7 +1636,7 @@ public class TreeCutter {
                     if (leaf.getType() == leafType) {
                         // Particelle che simulano le foglie che si muovono
                         player.getWorld().spawnParticle(
-                                Particle.BLOCK_CRACK,
+                                VersionCompatibility.getBlockParticle(),
                                 leaf.getLocation().add(0.5, 0.5, 0.5),
                                 2, 0.4, 0.4, 0.4, 0,
                                 leaf.getBlockData());

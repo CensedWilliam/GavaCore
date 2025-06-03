@@ -1,6 +1,7 @@
 package library.commands;
 
 import library.Main;
+import library.VersionCompatibility;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.command.Command;
@@ -20,11 +21,11 @@ public class ResolveAnimationBugsCommand implements CommandExecutor {
     private final Main plugin;
     // Effetti che potrebbero impedire il movimento
     private final List<PotionEffectType> movementEffects = Arrays.asList(
-        PotionEffectType.SLOW,
+        VersionCompatibility.getSlownessEffect(),
         PotionEffectType.BLINDNESS,
-        PotionEffectType.JUMP,
+        VersionCompatibility.getJumpBoostEffect(),
         PotionEffectType.LEVITATION,
-        PotionEffectType.CONFUSION
+        VersionCompatibility.getNauseaEffect()
     );
 
     public ResolveAnimationBugsCommand(Main plugin) {

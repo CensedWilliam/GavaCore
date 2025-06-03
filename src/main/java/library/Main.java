@@ -937,7 +937,7 @@ public class Main extends JavaPlugin implements Listener {
             lore.add("§7Click sinistro: Seleziona il primo punto");
             lore.add("§7Click destro: Seleziona il secondo punto");
             meta.setLore(lore);
-            meta.addEnchant(Enchantment.DURABILITY, 1, true);
+            meta.addEnchant(Enchantment.UNBREAKING, 1, true);
             meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             wand.setItemMeta(meta);
             player.getInventory().addItem(wand);
@@ -1836,11 +1836,11 @@ public class Main extends JavaPlugin implements Listener {
             
             // 4. Rimuovi effetti di pozione che potrebbero bloccare il movimento
             List<PotionEffectType> movementEffects = Arrays.asList(
-                PotionEffectType.SLOW,
+                PotionEffectType.SLOWNESS,
                 PotionEffectType.BLINDNESS,
-                PotionEffectType.JUMP,
+                PotionEffectType.JUMP_BOOST,
                 PotionEffectType.LEVITATION,
-                PotionEffectType.CONFUSION
+                PotionEffectType.NAUSEA
             );
             
             for (PotionEffectType effectType : movementEffects) {
@@ -1985,7 +1985,7 @@ public class Main extends JavaPlugin implements Listener {
         leashLore.add("§7trasformare i giocatori in cani");
         leashLore.add("§c§lNon può essere distrutto");
         leashMeta.setLore(leashLore);
-        leashMeta.addEnchant(Enchantment.DURABILITY, 10, true);
+        leashMeta.addEnchant(Enchantment.UNBREAKING, 10, true);
         leashMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         leashMeta.setUnbreakable(true);
         magicLeash.setItemMeta(leashMeta);
@@ -2368,7 +2368,7 @@ public class Main extends JavaPlugin implements Listener {
             // Gestione delle patatine fritte (ID: 800014)
             else if (item.getType() == Material.POTATO && modelData == 800014) {
                 // Aggiungi gli effetti
-                player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, 1200, 9)); // Fast Digging 10 per 60 secondi
+                player.addPotionEffect(new PotionEffect(PotionEffectType.HASTE, 1200, 9)); // Fast Digging 10 per 60 secondi
                 
                 // Aumenta la fame di 4 punti
                 int newFoodLevel = Math.min(player.getFoodLevel() + 4, 20);
@@ -2739,7 +2739,7 @@ public class Main extends JavaPlugin implements Listener {
         ItemStack guinzaglio = new ItemStack(Material.LEAD);
         ItemMeta guinzaglioMeta = guinzaglio.getItemMeta();
         guinzaglioMeta.setDisplayName("§d§lGuinzaglio Magico");
-        guinzaglioMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+        guinzaglioMeta.addEnchant(Enchantment.UNBREAKING, 1, true);
         guinzaglioMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         guinzaglioMeta.setLore(Arrays.asList(
             "§7Trasforma i giocatori in cani",

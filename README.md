@@ -1,7 +1,7 @@
 # 🎮 GavaCore - La Base per i Server Minecraft
 
-![Version](https://img.shields.io/badge/version-0.5.5-blue.svg)
-![Minecraft](https://img.shields.io/badge/minecraft-1.20.2-green.svg)
+![Version](https://img.shields.io/badge/version-0.2-blue.svg)
+![Minecraft](https://img.shields.io/badge/minecraft-1.21.x-green.svg)
 ![Author](https://img.shields.io/badge/author-GavaTech-orange.svg)
 
 GavaCore è un plugin completo per server Minecraft che offre un'ampia gamma di funzionalità essenziali e avanzate, progettato per migliorare l'esperienza di gioco con animazioni spettacolari, sistemi di gestione intuitivi e ottimizzazioni delle performance.
@@ -50,7 +50,7 @@ GavaCore è un plugin completo per server Minecraft che offre un'ampia gamma di 
 
 ## 📋 Requisiti
 
-- **Minecraft Server**: Spigot/Paper 1.20.2+
+- **Minecraft Server**: Spigot/Paper 1.21+
 - **Java**: 8 o superiore
 - **RAM**: Minimo 2GB raccomandata
 - **Plugin Opzionali Supportati**:
@@ -177,8 +177,8 @@ GavaCore utilizza bStats per raccogliere statistiche anonime sull'utilizzo. Ques
 ## 📜 Crediti
 
 **Sviluppato da**: GavaTech  
-**Versione**: 1.5.0  
-**Compatibilità**: Minecraft 1.20.2+  
+**Versione**: 0.2  
+**Compatibilità**: Minecraft 1.20+  
 
 ---
 
